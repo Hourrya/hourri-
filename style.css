@@ -1,0 +1,187 @@
+/* ...existing code... */
+/* Theme variables */
+:root{
+    --bleu1: #1E3A5F;
+    --bleuclaire: #6FA8DC;
+    --bleu2: #2D587F;
+    --accent: #78A474; /* green accent available */
+    --bg: #EAF3FB;
+    --card: #FFFFFF;
+    --muted: #97A7B8;
+    --text: #0B2746;
+    --shadow-1: 0 8px 24px rgba(14,30,60,0.12);
+    --shadow-2: 0 6px 18px rgba(14,30,60,0.08);
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --glass: rgba(255,255,255,0.06);
+}
+
+/* Basic reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, #e9f3fb 0%, var(--bg) 100%);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar */
+.side-bar{
+    width:200px;
+    background: linear-gradient(180deg,var(--bleu1),var(--bleu2));
+    color:var(--bleuclaire);
+    padding:20px 16px;
+    border-radius:0 var(--radius-lg) var(--radius-lg) 0;
+    box-shadow: 6px 0 30px rgba(13,34,60,0.08);
+    overflow:auto;
+}
+.nom-logo{display:flex;flex-direction:column;align-items:center;gap:6px;padding-bottom:6px}
+.logo{
+    font-size:1.6rem;
+    margin:0;
+    color:#fff;
+    letter-spacing:0.02em;
+    text-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+.indication{margin:0;font-size:0.85rem;color:rgba(255,255,255,0.85)}
+
+/* Sidebar links */
+.side-bar-link{padding:0;margin:18px 0 0 0;list-style:none}
+.side-bar-link li{margin-bottom:10px}
+.side-bar-link a{
+    display:flex;align-items:center;gap:10px;
+    text-decoration:none;
+    color:var(--bleu1);
+    background: linear-gradient(180deg,#fff,#f6fbff);
+    padding:10px 12px;border-radius:12px;
+    box-shadow:var(--shadow-2);
+    transition:transform .18s ease, box-shadow .18s ease;
+}
+.side-bar-link a:hover{transform:translateX(6px);box-shadow:var(--shadow-1)}
+.side-bar-link a i{width:22px;text-align:center;color:var(--bleu1)}
+
+/* Separators */
+.sep-1{border:none;height:1px;background:rgba(255,255,255,0.08);margin:14px 0}
+.line-text{display:flex;align-items:center;gap:8px;margin:18px 0;color:rgba(255,255,255,0.7)}
+.line-text hr{flex:1;height:1px;border:none;background:rgba(255,255,255,0.06)}
+.line-text span{font-size:0.9rem;color:rgba(255,255,255,0.9)}
+
+/* Main area */
+main{
+    flex:1;
+    padding:28px;
+    min-height:100vh;
+}
+
+/* Dashboard: 3 cards on same line */
+.dashboard{
+    display:flex;
+    gap:14px;
+    align-items:center;
+    margin-bottom:20px;
+    flex-wrap:nowrap;
+}
+.info-card{
+    background:linear-gradient(180deg,var(--bleu2),var(--bleu1));
+    color:#fff;
+    padding:10px 14px;
+    border-radius:14px;
+    min-width:170px;
+    text-align:center;
+    box-shadow:var(--shadow-1);
+    border:1px solid rgba(255,255,255,0.06);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.info-card h3{
+    margin:0;font-size:11px;color:var(--bleuclaire);
+    text-transform:uppercase;letter-spacing:0.06em;font-weight:700;
+}
+.info-card p{margin:6px 0 0;font-size:15px;font-weight:700}
+
+/* Planning container with shape and accent */
+.planning-container{
+    background: linear-gradient(180deg, rgba(255,255,255,0.9), var(--card));
+    border-radius:var(--radius-md);
+    padding:18px;
+    box-shadow:0 12px 30px rgba(14,34,60,0.06);
+    border:1px solid rgba(30,50,90,0.06);
+}
+
+/* Heading and button */
+.planning-container h2{margin:0 0 12px;color:var(--bleu1);font-size:1.15rem}
+.add-btn{
+    background:linear-gradient(180deg,var(--bleuclaire),#5e9ed8);
+    color:var(--bleu1);
+    border:none;padding:8px 12px;border-radius:10px;
+    cursor:pointer;font-weight:700;display:inline-flex;gap:8px;align-items:center;
+    box-shadow:0 6px 18px rgba(110,170,220,0.18);
+}
+.add-btn i{font-size:14px}
+.add-btn:hover{transform:translateY(-2px)}
+
+/* Planning table: restored size and colors */
+.planning-table{width:100%;overflow:auto;margin-top:12px}
+.planning-table table{width:100%;border-collapse:collapse;font-size:14px}
+.planning-table th, .planning-table td{
+    border:1px solid rgba(30,60,100,0.08);
+    padding:10px 12px;text-align:center;
+}
+.planning-table th{
+    background:linear-gradient(180deg,var(--bleu1),var(--bleu2));
+    color:var(--bleuclaire);font-weight:800;font-size:13px;
+}
+.planning-table td:first-child{
+    background:linear-gradient(180deg,var(--bleu1),#264564);
+    color:var(--bleuclaire);font-weight:700;width:110px;
+}
+.planning-table td{
+    height:48px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(245,252,255,0.95));
+    color:var(--text);
+}
+.planning-table tr:nth-child(even) td{background:linear-gradient(180deg,#fbfeff,#f2fbff)}
+
+/* Small badges inside cells */
+.cell-badge{
+    display:inline-block;padding:6px 8px;border-radius:10px;background:linear-gradient(90deg,var(--bleuclaire),#9cc9ee);
+    color:var(--bleu1);font-weight:700;font-size:13px;
+}
+
+/* Modal (centered) */
+.modal{
+    position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(4,12,28,0.45);z-index:999;
+}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{
+    background:var(--card);padding:18px;border-radius:14px;min-width:340px;box-shadow:0 20px 40px rgba(6,18,40,0.28);
+}
+.modal-content h2{margin:0 0 10px;color:var(--bleu1)}
+.modal-content label{display:block;margin-top:10px;font-size:13px;color:var(--muted)}
+.modal-content input[type="text"], .modal-content input[type="time"], .modal-content select{
+    width:100%;padding:10px;border-radius:10px;border:1px solid rgba(20,40,80,0.06);margin-top:6px;
+}
+
+/* Buttons inside modal */
+.modal-actions{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.btn-primary{background:var(--bleuclaire);color:var(--bleu1);border:none;padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:700}
+.btn-ghost{background:transparent;border:1px solid rgba(10,30,60,0.06);padding:8px 12px;border-radius:10px;cursor:pointer}
+
+/* Responsive */
+@media (max-width:900px){
+    .side-bar{position:relative;width:100%;height:auto;border-radius:0 0 16px 16px}
+    main{padding:16px}
+    .dashboard{flex-wrap:wrap}
+    .info-card{min-width:140px}
+    .planning-table td{height:42px;padding:8px}
+}
+@media (max-width:520px){
+    .dashboard{flex-direction:column;gap:10px}
+    .planning-table table{font-size:13px}
+}
+/* ...existing code... */
