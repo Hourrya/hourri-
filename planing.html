@@ -1,0 +1,101 @@
+<!-- ...existing code... -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Accueil - SAHA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/fichiercss/style.css">
+    <script src="/fichierjs/script.js" defer></script>
+</head>
+<body>
+    <div class="side-bar">
+        <div class="nom-logo">
+            <h2 class="logo">SAHA</h2>
+            <h5 class="indication">Espace personnel</h5>
+        </div>
+        <hr class="sep-1">
+        <div class="line-text">
+            <hr><span>Navigation</span><hr>
+        </div>
+        <ul class="side-bar-link">
+            <li><a href="home-page.html"><i class="fa-solid fa-house"></i>Accueil</a></li>
+            <li><a href="compte.html"><i class="fa-solid fa-user"></i>Compte</a></li>
+            <li class="line-text"><hr><span>Collection</span><hr></li>
+            <li><a href="stats.html"><i class="fa-solid fa-chart-line"></i>Stats</a></li>
+            <li><a href="home-page.html"><i class="fa-regular fa-calendar-days"></i>Planing</a></li>
+            <li class="line-text"><hr><span>Support</span><hr></li>
+            <li><a href="login.html"><i class="fa-solid fa-question"></i>Aide</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+
+        <div class="planning-container">
+            <h2>Mon planning hebdomadaire</h2>
+            <button class="add-btn" id="openModal"><i class="fa-solid fa-plus"></i>Ajouter une tâche</button>
+
+            <div class="planning-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Heure</th>
+                            <th>Lundi</th>
+                            <th>Mardi</th>
+                            <th>Mercredi</th>
+                            <th>Jeudi</th>
+                            <th>Vendredi</th>
+                            <th>Samedi</th>
+                            <th>Dimanche</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>08:00 - 09:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>09:00 - 10:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>10:00 - 11:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>11:00 - 12:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>12:00 - 13:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>13:00 - 14:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>14:00 - 15:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>15:00 - 16:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>16:00 - 17:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="modal" id="courseModal" aria-hidden="true">
+            <div class="modal-content">
+                <h2>Ajouter un cours</h2>
+                <form id="courseForm">
+                    <label for="courseName">Nom du cours :</label>
+                    <input type="text" id="courseName" name="courseName" required>
+
+                    <label for="courseDay">Jour :</label>
+                    <select id="courseDay" name="courseDay" required>
+                        <option value="">Sélectionnez un jour</option>
+                        <option value="lundi">Lundi</option>
+                        <option value="mardi">Mardi</option>
+                        <option value="mercredi">Mercredi</option>
+                        <option value="jeudi">Jeudi</option>
+                        <option value="vendredi">Vendredi</option>
+                        <option value="samedi">Samedi</option>
+                        <option value="dimanche">Dimanche</option>
+                    </select>
+
+                    <label for="courseTime">Heure (début) :</label>
+                    <input type="time" id="courseTime" name="courseTime" required>
+
+                    <div class="modal-actions">
+                        <button type="submit" id="saveCourse" class="btn-primary">Ajouter</button>
+                        <button type="button" id="closeModal" class="btn-ghost">Annuler</button>
+                        <button type="button" id="deleteCourse" class="btn-danger">Supprimer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>    
+</body>
+</html>
