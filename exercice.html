@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bleu1: #1E3a5f;
+    --bleuclaire: #6fa8dc;
+}
+
+*{
+    list-style: none;
+    font-style:none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    color: #161616;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    width: 100%;
+    margin-bottom: 3px;
+    margin-top: 30px;
+    font-family: poppins, sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    color: #161616;
+}
+
+#fermer{
+    align-self: center;
+    font-size: 1.3rem;
+    color: #161616;
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    transition: 0.3s ease;
+    background:none ;
+}
+#fermer:hover{
+    transform: scale(1.2);
+    color: #000000;
+    transition: 0.3s ease;
+}
+
+.side-bar{ 
+    width: 200px;
+    background: var(--bleu1);
+    color: var(--bleuclaire);
+    height: 100vh;
+    padding: 0px 16px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+    border-radius: 0 24px 24px 0;
+    position: sticky;
+    top: 0;
+ }
+
+.side-bar.close{
+    width: 200px;
+    background: var(--bleu1);
+    color: var(--bleuclaire);
+    height: 100vh;
+    padding: 0px 16px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+    border-radius: 0 24px 24px 0;
+    position: sticky;
+    top: 0;
+}
+
+.side-bar.close span{
+    opacity: 1;
+    width: auto;
+    overflow: auto;
+}
+
+.side-bar.close button{
+    gap: 10px;
+}
+
+.bouttons-actions ul{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.bouttons-actions button{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 14px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    white-space: nowrap;
+    background: #e7e7e7;
+    color: #161616;
+    border: 1px solid #c7c7c7;
+}
+#dif-mode{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: fixed;
+    border: none;
+    font-size: 15px;
+    border-radius: 11px;
+    padding: 11px 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    white-space: nowrap;
+    background: #e7e7e7;
+    color:#161616 ;
+    transition: ease 0.3s;
+}
+#dif-mode option{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: #f0f0f0;
+    color: #161616;
+}
+#dif-mode option:autofill{
+    background-color: #d0d0d0;
+}
+#dif-mode:hover{
+    transform: translateX(10px);
+    transition: ease 0.3s;
+    background-color: #d8d8d8;
+}
+
+.side-bar.close button{
+    transition: ease 0.3s;
+}
+
+.bouttons-actions button:hover{
+    transform: translateX(10px);
+    transition: ease 0.3s;
+    background-color: #d8d8d8;
+}
+
+.pied-de-page{
+    position: absolute;
+    bottom: 0px;
+}
+
+.contenue-ia{
+    flex: 1;
+    box-sizing: border-box;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.05);
+}
+
+.haut-de-page-contenu-ia{
+    display: flex;
+    gap: 670px;
+    color: #161616;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;
+    padding-top: 19px;
+    padding-bottom: 20px;
+}
+.nom-retour{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+#retoutpageprincipale{
+    background: #e7e7e7;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 11px;
+    color: #161616;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#retoutpageprincipale:hover{
+    transform: scale(1.1);
+    color: #161616;
+    background-color: #d0d0d0;
+    outline: 1px solid #b0b0b0;
+    transition: 0.2s;
+}
+.nom-ia{
+    font-size: 25px;
+}
+#phrase-intro{
+    position: relative;
+    top: 30%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif ;
+    color: #161616;
+}
+
+.elements-inputs{
+    background:none;
+    padding-right: 16px;
+    padding-left: 16px;
+    border: 1px solid #c7c7c7;
+    position: fixed;
+    width:auto;
+    height: auto;
+    bottom: 30px;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+}
+
+.elements-inputs input{
+    width: 500px;
+    padding: 20px 17px;
+    padding-left: 10px;
+    background: none;
+    border: none;
+    color: #161616;
+    font-size: 17px;
+    border-radius: 11px;
+    border-bottom-right-radius:0px ;
+    border-top-right-radius:0px;
+    cursor: text;
+}
+.elements-inputs input::placeholder{
+    color: #7a7a7a;
+    font-size: 17px;
+}
+input:focus{
+    outline: none;
+}
+#envoyerbtn{
+    font-size: 17px;
+    padding:10px 20px;
+    border: 1px solid #c7c7c7;
+    border-radius: 16px;
+    cursor: pointer;
+    background: #e7e7e7;
+    color: #161616;
+}
+#plus-input-btn{
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #c7c7c7;
+    border-radius: 50%;
+    background: #e7e7e7;
+    color: #161616;
+}
+.elements-inputs button{
+    background-color: #e7e7e7;
+    color: #161616;
+    cursor: pointer;
+    transition: 0.2s ease;
+    border: 1px solid #c7c7c7;
+}
+
+.elements-inputs button:hover{
+    background-color: #d8d8d8;
+    color: #161616;
+    transition: 0.2s ease;
+    border: 1px solid #999999;
+}
+    </style>
+      <div class="side-bar">
+        <!-- non de l'interface-->
+        <div class="header">
+            <button id="fermer">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <hr>
+        <!-- deifferents bouttons pour les actions-->
+        <div class="bouttons-actions">
+            <ul>
+                <li>
+                    <!--creation d'un nouveau chat-->
+                    <button id="boutonaction">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <span>Nouveau chat</span>
+                    </button>
+                </li>
+                <li>
+                    <select name="diff-modes" id="dif-mode">
+                        <option value="none" disabled selected>
+                            Modes
+                        </option>
+                        <option value="gemma">
+                            <button>Mathematiques</button>
+                        </option>
+                        <option value="litterature">
+                            <button>litterature</button>
+                        </option>
+                        <option value="gemmainfo">
+                            <button>Physique</button>
+                        </option>
+                        <option value="gemmainfo">
+                            <button>Informatique</button>
+                        </option>
+                    </select>
+                </li>
+                        <!--toutes les discussions recentes-->
+                        <button class="boutonaction">
+                            <i class="fa-solid fa-angle-down"></i>
+                            <span>discussions recentes</span>
+                        </button >
+                    </li>
+                </li>
+            </ul>
+        </div>
+        <!--identification des createur de l'interface-->
+    </div>
+    <!--partie dedier au messages-->
+    <div class="contenue-ia">
+        <!--haut de page-->
+        <div class="haut-de-page-contenu-ia">
+            <div class="nom-retour">
+                <a href="intermediare.html">
+                    <button id="retoutpageprincipale">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                </a>
+                <span class="nom-ia">Exercices</span>
+            </div>
+            <h1>IMAGE</h1>
+        </div>
+        <h2 id="phrase-intro">Bienvenue dans ta zone de progression!!!</h2>
+        <!--inputs et bouttons pour envoyer les messages-->
+        <div class="elements-inputs">
+            <button id="plus-input-btn">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <input type="text" placeholder="continuons">
+            <button id="envoyerbtn">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    <script>
+        const closebtn = document.getElementById('fermer');
+let sidebare = document.querySelector('.side-bar');
+let btnaction = document.querySelector('.boutonaction')
+
+function close(){
+    sidebare.classList.toggle("close");
+}
+
+closebtn.addEventListener('click',close);
+    </script>
+</body>
+</html>
