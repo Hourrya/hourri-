@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fichiercss/style.css">
+    <title>Contactez-nous - SAHA</title>
+    
+</head>
+<body>
+    <div class="contact-container">
+
+    <div class="contact-card">
+
+        <div class="contact-header">
+            <h2>Contactez-nous</h2>
+            <p>
+                Une question, une suggestion ou un problème ?
+                Notre équipe est là pour vous aider.
+            </p>
+        </div>
+
+        <div class="contact-info">
+
+            <div class="info-box">
+                <span>📧</span>
+                <p>saha.support@gmail.com</p>
+            </div>
+
+            <div class="info-box">
+                <span>📞</span>
+                <p>+223 92 52 50 96</p>
+            </div>
+
+            <div class="info-box">
+                <span>📍</span>
+                <p>Technolab-ISTA Direction, Bamako</p>
+            </div>
+
+        </div>
+
+        <form id="contactForm" class="contact-form">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Votre nom"
+                required
+            >
+            <input
+                type="email"
+                id="email"
+                placeholder="Votre email"
+                required
+            >
+            <textarea
+                id="message"
+                placeholder="Décrivez votre problème..."
+                required
+            ></textarea>
+
+            <button
+                type="submit"
+                class="send-btn"
+            >
+                Envoyer le message
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="../fichierjs/contact.js"></script>
+</body>
+</html>
