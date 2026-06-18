@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mode d'utilisation — SAHA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/fichiercss/style.css">
+  <style>
+    :root{
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --text:#122436;
+      --muted:#60718d;
+      --accent:#1f56ad;
+      --border:rgba(31,86,173,0.16);
+    }
+
+    *{box-sizing:border-box}
+    body{margin:0; min-height:100vh; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text)}
+
+    main{max-width:700px; margin:28px auto; padding:22px; background:var(--card); border-radius:16px; border:1px solid var(--border);}
+
+    .hero{margin-bottom:20px}
+    .hero h1{margin:0; font-size:1.75rem; color:var(--accent)}
+    .hero p{margin:10px 0 0; color:var(--muted); line-height:1.6}
+
+    .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:22px}
+    .card{background:#f8fbff; border-radius:14px; padding:16px; border:1px solid rgba(31,86,173,0.08);}
+    .icon{width:40px; height:40px; border-radius:12px; display:grid; place-items:center; background:rgba(31,86,173,0.12); color:var(--accent); font-size:18px}
+    .card h3{margin:10px 0 6px; font-size:1rem; color:var(--text)}
+    .card p{margin:0; color:var(--muted); font-size:0.95rem; line-height:1.5}
+
+    .actions{display:flex; justify-content:flex-end; gap:10px; margin-top:20px}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; text-decoration:none; font-weight:600}
+    .btn-primary{background:var(--accent); color:#fff}
+    .btn-secondary{background:#eff4ff; color:var(--accent); border:1px solid rgba(31,86,173,0.14)}
+
+    @media(max-width:760px){.grid{grid-template-columns:1fr} .actions{justify-content:center}}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <h1>Mode d'utilisation</h1>
+      <p>Découvrez comment utiliser SAHA de manière simple et rapide : planning, révision assistée, QCM et exercices.</p>
+    </div>
+
+    <section class="grid">
+      <article class="card">
+        <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
+        <h3>Planning</h3>
+        <p>Planifiez vos sessions et organisez votre travail sans effort.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Stats</h3>
+        <p>Visualisez votre progression et ajustez vos objectifs.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon"><i class="fa-solid fa-brain"></i></div>
+        <h3>Révision IA</h3>
+        <p>L'IA propose des séances adaptées pour renforcer vos connaissances.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon"><i class="fa-solid fa-file-lines"></i></div>
+        <h3>Résumé & Exos</h3>
+        <p>Accédez à des résumés clairs et des exercices corrigés.</p>
+      </article>
+    </section>
+
+    <div class="actions">
+      <a class="btn btn-secondary" href="compte.html"><i class="fa-solid fa-user"></i> Mon espace</a>
+      <a class="btn btn-primary" href="home-page.html"><i class="fa-solid fa-arrow-right"></i> Commencer</a>
+    </div>
+  </main>
+</body>
+</html>

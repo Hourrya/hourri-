@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mode d'utilisation - SAHA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/fichiercss/style.css">
+    <script src="/fichierjs/script.js" defer></script>
+</head>
+<body>
+    <div class="side-bar">
+        <div class="nom-logo">
+            <h2 class="logo">SAHA</h2>
+            <h5 class="indication">Espace personnel</h5>
+        </div>
+        <hr class="sep-1">
+        <div class="line-text">
+            <hr><span>Navigation</span><hr>
+        </div>
+        <ul class="side-bar-link">
+            <li><a href="home-page.html"><i class="fa-solid fa-house"></i>Accueil</a></li>
+            <li><a href="compte.html"><i class="fa-solid fa-user"></i>Compte</a></li>
+            <li class="line-text"><hr><span>Collection</span><hr></li>
+            <li><a href="stats.html"><i class="fa-solid fa-chart-line"></i>Stats</a></li>
+            <li><a href="planing.html"><i class="fa-regular fa-calendar-days"></i>Planing</a></li>
+            <li class="line-text"><hr><span>Support</span><hr></li>
+            <li><a href="home-page.html"><i class="fa-solid fa-question"></i>Aide</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="usage-container">
+            <!-- Intro Section -->
+            <section class="usage-section intro-section">
+                <h1>Mode d'utilisation</h1>
+                <p class="intro-text">Bienvenue sur votre toute nouvelle application <strong>SAHA</strong>.</p>
+            </section>
+
+            <!-- Overview Section -->
+            <section class="usage-section overview-section">
+                <h2><i class="fa-solid fa-lightbulb"></i> À propos de SAHA</h2>
+                <p>
+                    Cette application conçue pour tout type d'étudiant vous donne accès à ses nombreuses fonctionnalités :
+                </p>
+                <ul class="features-list">
+                    <li><strong>Emploi du temps personnalisé</strong> : Créez votre programme en fonction de vos objectifs académiques</li>
+                    <li><strong>Suivi de progression</strong> : Consultez votre évolution hebdomadaire</li>
+                    <li><strong>Assistants IA avancés</strong> : Quatre outils dédiés pour améliorer votre apprentissage</li>
+                </ul>
+            </section>
+
+            <!-- IA Features Section -->
+            <section class="usage-section ia-features-section">
+                <h2><i class="fa-solid fa-brain"></i> Nos Assistants IA</h2>
+                <p>Découvrez nos quatre assistants intelligents conçus pour améliorer votre apprentissage :</p>
+                
+                <div class="ia-cards">
+                    <div class="ia-feature-card">
+                        <h3><i class="fa-solid fa-book"></i> Gemma Révision</h3>
+                        <p>Organisez et améliorez vos révisions facilement avec des questions ciblées. Testez votre compréhension et renforcez vos connaissances.</p>
+                    </div>
+
+                    <div class="ia-feature-card">
+                        <h3><i class="fa-solid fa-circle-check"></i> Gemma QCM</h3>
+                        <p>Testez vos connaissances en répondant à des questions à choix multiples. Choisissez une réponse parmi quatre propositions et progressez vers la réussite.</p>
+                    </div>
+
+                    <div class="ia-feature-card">
+                        <h3><i class="fa-solid fa-file-lines"></i> Gemma Résumé</h3>
+                        <p>Des cours trop longs et difficiles à retenir ? Comprenez l'essentiel en quelques lignes concises et bien structurées.</p>
+                    </div>
+
+                    <div class="ia-feature-card">
+                        <h3><i class="fa-solid fa-laptop-code"></i> Gemma Exercice</h3>
+                        <p>Des exercices générés spécialement pour vous dans différents domaines : informatique, mathématiques, physique et bien d'autres.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion Section -->
+            <section class="usage-section conclusion-section">
+                <h2><i class="fa-solid fa-rocket"></i> Commencez maintenant</h2>
+                <p>N'hésitez plus, commencez votre parcours d'apprentissage dès maintenant et découvrez tout le potentiel de SAHA.</p>
+                <p class="good-wishes"><strong>Bonne utilisation !!!</strong></p>
+                <a href="home-page.html" class="btn-primary"><i class="fa-solid fa-arrow-right"></i> Commencer</a>
+            </section>
+        </div>
+    </main>
+
+    <style>
+        .usage-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px 20px;
+        }
+
+        .usage-section {
+            margin-bottom: 40px;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .intro-section h1 {
+            font-size: 2.5rem;
+            color: var(--bleu1);
+            margin: 0 0 16px;
+            text-align: center;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text);
+            text-align: center;
+            margin: 0;
+        }
+
+        .usage-section h2 {
+            font-size: 1.5rem;
+            color: var(--bleu1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 16px;
+        }
+
+        .usage-section h2 i {
+            color: var(--bleuclaire);
+        }
+
+        .usage-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0 0 16px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
+        }
+
+        .features-list li {
+            padding: 12px;
+            margin: 8px 0;
+            background: rgba(30, 58, 95, 0.06);
+            border-left: 4px solid var(--bleu1);
+            border-radius: 6px;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .ia-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .ia-feature-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(24, 44, 90, 0.08);
+            border: 1px solid rgba(30, 58, 95, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ia-feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(24, 44, 90, 0.12);
+        }
+
+        .ia-feature-card h3 {
+            font-size: 1.1rem;
+            color: var(--bleu1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 12px;
+        }
+
+        .ia-feature-card h3 i {
+            color: var(--bleuclaire);
+            font-size: 1.3rem;
+        }
+
+        .ia-feature-card p {
+            font-size: 0.95rem;
+            color: var(--text);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .conclusion-section {
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.08), rgba(111, 168, 220, 0.05));
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(30, 58, 95, 0.12);
+        }
+
+        .conclusion-section h2 {
+            justify-content: center;
+        }
+
+        .good-wishes {
+            font-size: 1.2rem;
+            color: var(--bleu1);
+            margin: 20px 0 !important;
+        }
+
+        .conclusion-section .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .intro-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .usage-section h2 {
+                font-size: 1.2rem;
+            }
+
+            .ia-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .conclusion-section {
+                padding: 24px;
+            }
+        }
+    </style>
+</body>
+</html>
